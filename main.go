@@ -77,4 +77,18 @@ func main() {
 	// default value of bool is false
 	var u bool
 	fmt.Printf("%v,%T", u, u)
+
+	// strings
+	v := "this is a string"
+	w := []byte(v)
+	fmt.Printf("%v,%T", w, w)
+
+	// rune
+	x := 'a'  // a rune is an integer 32
+	fmt.Printf("%v,%T", x, x)  // output { 97, int32 }
+
+	var y rune = 'a'
+	fmt.Printf("%v,%T", y, y) 
+
 }
+
