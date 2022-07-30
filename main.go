@@ -63,4 +63,18 @@ func main() {
 	var q string
 	q = strconv.Itoa(n)
 	fmt.Printf("%v,%T", q, q)  
+
+	// boolean in go 
+	var r bool = true
+	fmt.Printf("%v,%T", r, r)  
+
+	// logical tests
+	s := 1 == 1
+	t := 1 == 2
+	fmt.Printf("\n%v,%T\n", s, s)  
+	fmt.Printf("%v,%T", t, t) 
+	
+	// default value of bool is false
+	var u bool
+	fmt.Printf("%v,%T", u, u)
 }
