@@ -17,6 +17,12 @@ var (
 	gpa float32 = 7.5
 )
 
+const (
+	ab = iota
+	bb
+	cb
+)
+
 
 func main() {
 	fmt.Println("salaam!")
@@ -90,5 +96,43 @@ func main() {
 	var y rune = 'a'
 	fmt.Printf("%v,%T", y, y) 
 
+	// iota   // iota = 0 and next iota is +1
+	fmt.Printf("\n%v,%T\n", bb, bb) 
+
+	// arrays
+	marks := [3]int{23,57,98}
+	marks1 := [...]int{23,57,98,73}
+	
+	var marks2 [3]string
+	marks2[0] = "farid"
+	marks2[1] = "farid1"
+	marks2[2] = "farid2"
+
+	fmt.Printf("\n%v\n", marks) 
+	fmt.Printf("\n%v\n", marks1) 
+	fmt.Printf("\n%v\n", marks2) 
+	fmt.Printf("\n%v\n", marks2[2]) 
+	fmt.Printf("%v\n", len(marks2)) 
+
+	// array matrix
+	var array [3][3]int
+	array[0] = [3]int{1,2,3}
+	array[1] = [3]int{11,22,33}
+	array[2] = [3]int{111,222,333}
+
+	fmt.Printf("\n%v\n", array) 
+	
+	// pointers
+	arr := [...]int{1,2,4}
+	arr1 := arr
+	arr1[1] = 5
+
+	arr2 := [...]int{4,9,6}
+	arr3 := &arr2
+	arr3[1] = 5
+
+	fmt.Printf("\n%v\n", arr)
+	fmt.Printf("\n%v\n", arr1)
+	fmt.Printf("\n%v\n", arr3)
 }
 
