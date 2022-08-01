@@ -134,5 +134,29 @@ func main() {
 	fmt.Printf("\n%v\n", arr)
 	fmt.Printf("\n%v\n", arr1)
 	fmt.Printf("\n%v\n", arr3)
+
+	// map
+	statePopulations := map[string]int{
+		"california" : 329490,
+		"los angles" : 498338,
+		"new york" : 437820,
+		"texas" : 986489,
+		"alabama" : 109937,
+	}
+	fmt.Printf("\n%v\n", statePopulations)
+	
+	statePopulations["georgia"] = 438239
+	fmt.Printf("\n%v\n", statePopulations)
+	
+	delete(statePopulations, "georgia")
+	fmt.Printf("\n%v\n", statePopulations)
+	fmt.Printf("\n%v\n", len(statePopulations))
+	
+	// check if key is in the map or not
+	
+	// pop, ok := statePopulations["texs"]
+	pop, ok := statePopulations["texas"]
+	fmt.Println( pop, ok)
+
 }
 
