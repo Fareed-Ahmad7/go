@@ -23,6 +23,12 @@ const (
 	cb
 )
 
+type doctor struct {
+	number int
+	actorName string
+	companions []string
+
+}
 
 func main() {
 	fmt.Println("salaam!")
@@ -157,6 +163,19 @@ func main() {
 	// pop, ok := statePopulations["texs"]
 	pop, ok := statePopulations["texas"]
 	fmt.Println( pop, ok)
+
+	// structs
+	aDoctor:= doctor{
+		actorName: "farid",
+		number: 3,
+		companions: []string{
+			"ahmed",
+			"shaik",
+		},
+	}
+	fmt.Println(aDoctor)
+	fmt.Println(aDoctor.actorName)
+	fmt.Println(aDoctor.companions[0])
 
 }
 
