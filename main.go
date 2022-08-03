@@ -30,6 +30,12 @@ type doctor struct {
 
 }
 
+type Animal struct {
+	
+	name string `max:"100"`
+	origin string
+}
+
 func main() {
 	fmt.Println("salaam!")
 	fmt.Println(349)
@@ -176,6 +182,44 @@ func main() {
 	fmt.Println(aDoctor)
 	fmt.Println(aDoctor.actorName)
 	fmt.Println(aDoctor.companions[0])
+
+	firstanimal := Animal{
+		name: "emu",
+		origin: "australia",
+	}
+	fmt.Println(firstanimal)
+
+	// if statements
+	if true {
+		fmt.Printf("This is true")
+	} else {
+		fmt.Printf("This is false")
+	}
+
+	num := 30
+	num1 := 40
+	if num > num1 {
+		fmt.Printf("num is greater than num1")
+	}
+	if num < num1 {
+		fmt.Printf("num1 is greater than num")
+	}
+	if num == num1 {
+		fmt.Printf("num is equal to num1")
+	} 
+
+	// switch statements
+
+	switch 2 {
+	case 1 :
+		fmt.Printf("one")
+	case 2 :
+		fmt.Printf("two")
+	case 3 :
+		fmt.Printf("three")
+	default:
+		fmt.Printf("none")
+	}
 
 }
 
