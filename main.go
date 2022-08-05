@@ -221,5 +221,28 @@ func main() {
 		fmt.Printf("none")
 	}
 
+	// loops
+	for i := 0; i<5; i++{
+		fmt.Printf("meow")
+	}
+
+	for i,j := 0, 0;  i<5;  i,j = i+1, j+2{
+		fmt.Println(i, j)
+	} 
+	
+	fmt.Println("")
+
+	Loop:
+			for i := 1 ; i <= 3; i++{
+				for j := 1; j <= 3; j++ {
+					fmt.Println(i * j)
+					if i * j >= 3{
+						// break doesn't work as intended here
+						break Loop
+
+					}
+				}
+			}
+
 }
 
