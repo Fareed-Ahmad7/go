@@ -243,6 +243,34 @@ func main() {
 					}
 				}
 			}
+	
+	// looping over collections
+	slice := []int{1,2,3}
+	fmt.Println(slice)
+	for key, value := range slice{
+		fmt.Println(key, value)
+	}
+	for _, value := range slice{
+		fmt.Println(value)
+	}
+
+	// defer functions
+	// defer is executed after completion of main func execution
+	fmt.Println("start")
+	defer fmt.Println("middle")
+	fmt.Println("end")
+
+	// multiple defers are executed in lifo order {last in first out}
+	defer fmt.Println("start1")
+	defer fmt.Println("middle2")
+	defer fmt.Println("end3")
+
+	// defer takes first initialized value of variable
+	var1 := "farid"
+	defer fmt.Println(var1)
+	var1 = "ahmed"
+	fmt.Println(var1)
+
 
 }
 
