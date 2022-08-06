@@ -271,6 +271,22 @@ func main() {
 	var1 = "ahmed"
 	fmt.Println(var1)
 
+	// panic
+	// below code will make go run into exception which makes it no longer execute next lines of code
+	// this is called as panic in golang.
+	num_1 , num_2 := 1, 0
+	ans := num_1/num_2
+	fmt.Println(ans)
+	// output {
+		// panic: runtime error: integer divide by zero
+	// }
+	
+	// using panic message
+	fmt.Println("hi")
+	panic("something bad happend")
+	fmt.Println("hello")
 
+	// after panic is executed defer statements are executed
+	
 }
 
