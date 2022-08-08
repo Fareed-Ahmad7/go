@@ -9,6 +9,12 @@ func main() {
 	name:= "fareed"
 	person(name)
 	fmt.Println(name)
+
+	// anonymous function
+	func(){
+	fmt.Println("hi there! I'm a anonymous function")	
+	}()
+
 }
 
 func message(){
